@@ -24,8 +24,11 @@ con.on('open', () => {
 
 app.use(express.json())
 var loginRouter = require('./routes/login')
+var cardRouter = require('./routes/cards')
 
 app.use('/login',loginRouter)
+app.use('/cards',cardRouter)
+
 
 app.listen(5000, () => {
     console.log("srver started...")
